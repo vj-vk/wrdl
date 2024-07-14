@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>wrdl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="invalid" id="invalid">
+    </div>
+    <div class="grid-container">
+        <div class="tiles" id="0"></div>
+        <div class="tiles" id="1"></div>
+        <div class="tiles" id="2"></div>
+        <div class="tiles" id="3"></div>
+        <div class="tiles" id="4"></div>
+        <div class="tiles" id="5"></div>
+        <div class="tiles" id="6"></div>
+        <div class="tiles" id="7"></div>
+        <div class="tiles" id="8"></div>
+        <div class="tiles" id="9"></div>
+        <div class="tiles" id="10"></div>
+        <div class="tiles" id="11"></div>
+        <div class="tiles" id="12"></div>
+        <div class="tiles" id="13"></div>
+        <div class="tiles" id="14"></div>
+        <div class="tiles" id="15"></div>
+        <div class="tiles" id="16"></div>
+        <div class="tiles" id="17"></div>
+        <div class="tiles" id="18"></div>
+        <div class="tiles" id="19"></div>
+        <div class="tiles" id="20"></div>
+        <div class="tiles" id="21"></div>
+        <div class="tiles" id="22"></div>
+        <div class="tiles" id="23"></div>
+        <div class="tiles" id="24"></div>
+        <div class="tiles" id="25"></div>
+        <div class="tiles" id="26"></div>
+        <div class="tiles" id="27"></div>
+        <div class="tiles" id="28"></div>
+        <div class="tiles" id="29"></div>
+    </div>
+    <br><br>
+    <label for="guessBox" id="guessLabel">Your guess: </label>
+    <input type="text" class="guess-box" id="guessBox" pattern="[A-Za-z]" maxlength="5" minlength="5">
+    <br>
+    <button type="button" id="guessBtn" class="guess-button"
+        onclick="writeGuess();validate();document.getElementById('guessBox').value = ''">Enter</button>
+    <p id="endMessage"></p>
+    <a id="refresh" href="index.html">play again?</a>
+</body>
+
+</html>
