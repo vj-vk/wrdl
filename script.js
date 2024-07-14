@@ -115,5 +115,4 @@ function validate() {
 function endGame() {
     document.getElementById("guessBox").style.display = "none";
     document.getElementById("guessBtn").style.display = "none";
-    document.getElementById("guessLabel").style.display = "none";
 }
