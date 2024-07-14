@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    font-family: 'Tw Cen MT', Arial, sans-serif;
 }
 
 .grid-container {
@@ -17,14 +18,23 @@ body {
     align-items: center;
 }
 
+.container {
+    height: 50%;
+    width: 30%;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .invalid {
     height: 50px;
     width: 200px;
     position: absolute;
     top: 4%;
     left: 45%;
-    font-family: Tw Cen MT;
-    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
     color: azure;
     text-align: center;
 }
@@ -53,6 +63,7 @@ body {
     background-color: black;
     font-family: sans-serif;
     font-size: 25px;
+    font-weight: 400;
     text-transform: uppercase;
     font-weight: bold;
     color: white;
@@ -66,46 +77,45 @@ body {
     align-content: center;
 }
 
-label {
-    color: white;
-    position: absolute;
-    top: 73.5%;
-    left: 41%;
-    font-family: Tw Cen MT;
-    font-size: 30px;
-    text-align: center;
-}
-
 p {
+    height: 50px;
+    width: 100px;
     color: white;
-    position: absolute;
-    top: 74%;
-    left: 49%;
-    transform: translate(-50%, -50%);
-    font-family: Tw Cen MT;
-    font-size: 35px;
+    position: relative;
+    top: 22vh;
+    left: 10vw;
+    transform: translate(-100%, -50%);
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
     text-align: center;
+    text-wrap: nowrap;
 }
 
 a {
     color: white;
-    position: absolute;
-    top: 81%;
-    left: 49%;
-    transform: translate(-50%, -50%);
-    font-family: Tw Cen MT;
-    font-size: 35px;
+    height: 50px;
+    width: 100px;
+    color: white;
+    position: relative;
+    top: 20vh;
+    left: 16vw;
+    transform: translate(-100%, -50%);
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
     text-align: center;
     display: none;
 }
 
 .guess-box {
     color: white;
-    position: absolute;
-    top: 72%;
-    left: 50%;
-    font-family: Tw Cen MT;
-    font-size: 30px;
+    position: relative;
+    top: 24vh;
+    left: 10vw;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
     height: 40px;
     width: 175px;
     background-color: black;
@@ -117,11 +127,13 @@ a {
 .guess-button {
     height: 50px;
     width: 100px;
-    position: absolute;
-    top: 83%;
-    left: 47%;
-    font-family: Tw Cen MT;
-    font-size: 30px;
+    position: relative;
+    align-self: center;
+    top: 28vh;
+    left: 12vw;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
     border-radius: 4px;
     text-align: center;
     text-decoration: none;
