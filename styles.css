@@ -54,7 +54,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 3px solid gray;
+    outline: 3px solid rgb(48, 48, 48);
 }
 
 .guess-box {
