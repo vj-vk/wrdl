@@ -70,19 +70,22 @@ function shake() {
 function validate() {
     const word = randomWord;
     const inputWord = document.getElementById("guessBox").value.toLowerCase();
+    const endMessage = document.getElementById("endMessage");
+    const meaningLink = document.getElementById("meaningLink");
+
     if (!wordList.flat().includes(inputWord)) {
-        document.getElementById("invalid").innerHTML = "not in word list";
+        document.getElementById("invalid").innerHTML = "Not in word list";
         shake();
-        document.getElementById("guessBox").addEventListener("change", () => {
+        document.getElementById("guessBox").addEventListener("input", () => {
             document.getElementById("invalid").innerHTML = "";
         });
-    }
-    else if (currentRow < 7 && inputWord.length === 5) {
+    } else if (currentRow < 7 && inputWord.length === 5) {
         const temp = currentRow - 1;
         for (let i = 0; i < 5; i++) {
             const tileId = temp * 5 + i;
             const tile = document.getElementById(tileId.toString());
             tile.classList.remove("green", "yellow", "grey");
+
             if (inputWord[i] === word[i]) {
                 tile.classList.add("green");
             } else if (word.includes(inputWord[i])) {
@@ -97,17 +100,19 @@ function validate() {
                 tile.classList.add("grey");
             }
         }
+
         if (inputWord === word) {
             endGame();
-            document.getElementById("endMessage").textContent = "you win";
+            endMessage.textContent = "Correct!";
+            meaningLink.href = `https://www.google.com/search?q=${word}+meaning`;
+            meaningLink.style.display = "inline-block";
             document.getElementById("refresh").style.display = "inline-block";
-        }
-        else {
-            if (currentRow === 6) {
-                endGame();
-                document.getElementById("endMessage").textContent = `the correct word was ${word}`;
-                document.getElementById("refresh").style.display = "inline-block";
-            }
+        } else if (currentRow === 6) {
+            endGame();
+            endMessage.textContent = `The correct word was ${word}.`;
+            meaningLink.href = `https://www.google.com/search?q=${word}+meaning`;
+            meaningLink.style.display = "inline-block";
+            document.getElementById("refresh").style.display = "inline-block";
         }
     }
 }
